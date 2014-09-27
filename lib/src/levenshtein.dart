@@ -20,9 +20,6 @@ bool areWordsFriends(String w1, String w2) {
     // words aren't friends if they're equal
     return foundDiff;
   } else {
-    if (longer.startsWith(shorter)) {
-      return true;
-    }
     int shorterIdx = 0;
     int longerIdx = 0;
     while (shorterIdx < shorter.length) {
