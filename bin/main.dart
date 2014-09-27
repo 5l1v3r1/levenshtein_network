@@ -1,15 +1,9 @@
-library social_words;
-
+import '../lib/social_words.dart';
 import 'dart:io';
-import 'dart:async';
-
-part 'src/levenshtein.dart';
-part 'src/search.dart';
-part 'src/levenshtein_dictionary.dart';
 
 void main(List<String> args) {
   if (args.length != 3) {
-    stderr.writeln('Usage: dart social_words.dart <start word> '
+    stderr.writeln('Usage: dart bin/main.dart <start word> '
         '<path to dictionary> <output file>');
     exit(1);
   }

@@ -8,8 +8,8 @@ bool areWordsFriends(String w1, String w2) {
   } else if (shorter.length == longer.length) {
     // make sure there is exactly one difference
     bool foundDiff = false;
-    for (int i = 0; i < w1.length; ++i) {
-      if (w1.codeUnitAt(i) != w2.codeUnitAt(i)) {
+    for (int i = 0; i < shorter.length; ++i) {
+      if (shorter[i] != longer[i]) {
         if (foundDiff) {
           return false;
         } else {
@@ -23,14 +23,19 @@ bool areWordsFriends(String w1, String w2) {
     if (longer.startsWith(shorter)) {
       return true;
     }
-    // attempt to make them equal with a single insertion
-    for (int i = 0; i < shorter.length; ++i) {
-      if (longer.codeUnitAt(i) != shorter.codeUnitAt(i)) {
-        shorter = shorter.substring(0, i) + '${longer[i]}' +
-            shorter.substring(i);
-        break;
+    int shorterIdx = 0;
+    int longerIdx = 0;
+    while (shorterIdx < shorter.length) {
+      if (longer[longerIdx] != shorter[shorterIdx]) {
+        if (shorterIdx != longerIdx) {
+          return false;
+        }
+        ++longerIdx;
+        continue;
       }
+      ++longerIdx;
+      ++shorterIdx;
     }
-    return shorter == longer;
+    return true;
   }
 }
