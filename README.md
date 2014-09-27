@@ -1,3 +1,7 @@
+# Abstract
+
+This challenge solves [waypaver's CS challenge](https://github.com/waypaver/Challenge).
+
 # Program architecture
 
 The entire program was written in Dart. While it performs I/O asynchronously, it uses a blocking algorithm to find the solution.
