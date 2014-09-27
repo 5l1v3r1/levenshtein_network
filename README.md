@@ -10,7 +10,7 @@ The solution is found by searching a dictionary for all of the Levenshtein "frie
 
 # Benchmarks
 
-Using [randomlist.txt](randomlist.txt), this program found the social network of the word "foo" in less than 3 seconds using a single core of an Intel Core i7 2.6 GHz.
+Using [randomlist.txt](randomlist.txt), this program found the social network of the word "foo" in less than 2 seconds using a single core of an Intel Core i7 2.6 GHz.
 
 On my system, the Dart task uses about 30MB of memory. This is not bad, considering that it loads 117982 words into memory and that the Dart VM uses about 10MB of memory for an empty program.
 
